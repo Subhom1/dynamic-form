@@ -9,6 +9,10 @@ export const formValuesAtom = atom<Record<string, unknown>>({
   key: "formValues",
   default: {},
 });
+export const formSubmittedValuesAtom = atom<Record<string, unknown>>({
+  key: "formSubmittedValues",
+  default: {},
+});
 
 export const formErrorsAtom = atom<Record<string, string>>({
   key: "formErrors",

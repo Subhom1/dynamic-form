@@ -1,4 +1,3 @@
-
 export type FieldType =
   | "text"
   | "number"
@@ -7,19 +6,56 @@ export type FieldType =
   | "date"
   | "textarea";
 
-export interface BaseField {
+interface TextField {
   label: string;
   name: string;
-  type: FieldType;
+  type: "text";
   required?: boolean;
 }
 
-export interface SelectField extends BaseField {
-  type: "select";
-  options: string[];
+interface NumberField {
+  label: string;
+  name: string;
+  type: "number";
+  required?: boolean;
 }
 
-export type FormField = BaseField | SelectField;
+interface CheckboxField {
+  label: string;
+  name: string;
+  type: "checkbox";
+  required?: boolean;
+}
+
+interface DateField {
+  label: string;
+  name: string;
+  type: "date";
+  required?: boolean;
+}
+
+interface TextareaField {
+  label: string;
+  name: string;
+  type: "textarea";
+  required?: boolean;
+}
+
+ interface SelectField {
+  label: string;
+  name: string;
+  type: "select";
+  options: string[];
+  required?: boolean;
+}
+
+export type FormField =
+  | TextField
+  | NumberField
+  | CheckboxField
+  | SelectField
+  | DateField
+  | TextareaField;
 
 export interface FormSchema {
   title: string;
