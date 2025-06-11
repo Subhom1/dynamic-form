@@ -3,7 +3,20 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "types": ["jest", "@testing-library/jest-dom", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react-jsx",
+    "module": "NodeNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true
+  }
 }
+
 // This file is required by the TypeScript compiler to understand the project structure
 // and to manage the references to other TypeScript configuration files.
