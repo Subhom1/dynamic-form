@@ -17,9 +17,9 @@ const NumberField = ({ field, value, error, onChange }: Props) => (
       value={value || ""}
       onChange={(e) => onChange(field.name, parseInt(e.target.value))}
       className="border border-blue-600 rounded w-full px-3 py-2 text-black"
-      required
+      required={field.required}
     />
-    {error && <p className="text-red-500 text-sm">{error}</p>}
+    {error && <p className="text-red-500 text-sm mt-1 text-left">{error}</p>}
   </div>
 );
 

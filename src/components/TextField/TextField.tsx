@@ -18,7 +18,7 @@ const TextField = ({ field, value, error, onChange }: Props) => (
       value={value}
       onChange={(e) => onChange(field.name, e.target.value)}
       className="border border-blue-600 rounded w-full px-3 py-2 text-black"
-      required
+      required={field.required}
     />
     {error && <p className="text-red-500 text-sm text-start mt-1">{error}</p>}
   </div>

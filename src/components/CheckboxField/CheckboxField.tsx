@@ -7,16 +7,19 @@ type Props = {
   onChange: (name: string, value: boolean) => void;
 };
 // This component is used to render a checkbox input field with a label.
-const CheckboxField = ({ field, value, onChange }: Props) => (
-  <div className="mb-4 flex items-center gap-2">
-    <input
-      type="checkbox"
-      checked={value}
-      onChange={(e) => onChange(field.name, e.target.checked)}
-    />
-    <label className="font-medium text-blue-800 text-left mb-1">
-      {field.label}
-    </label>
+const CheckboxField = ({ field, value, onChange,error }: Props) => (
+  <div className="mb-4">
+    <div className="flex items-center gap-2 ">
+      <input
+        type="checkbox"
+        checked={value}
+        onChange={(e) => onChange(field.name, e.target.checked)}
+      />
+      <label className="font-medium text-blue-800 text-left mb-1">
+        {field.label}
+      </label>
+    </div>
+    {error && <p className="text-red-500 text-sm text-start">{error}</p>}
   </div>
 );
 
