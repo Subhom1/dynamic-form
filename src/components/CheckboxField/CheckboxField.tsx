@@ -14,6 +14,7 @@ const CheckboxField = ({ field, value, onChange,error }: Props) => (
         type="checkbox"
         checked={value}
         onChange={(e) => onChange(field.name, e.target.checked)}
+        className="cursor-pointer"
       />
       <label className="font-medium text-blue-800 text-left mb-1">
         {field.label}

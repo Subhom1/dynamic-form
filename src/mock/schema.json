@@ -2,6 +2,7 @@
   "title": "User Registration",
   "fields": [
     { "label": "Name", "type": "text", "name": "name", "required": true },
+    { "label": "Description", "type": "textarea", "name": "description", "required": true },
     { "label": "Age", "type": "number", "name": "age" },
     { "label": "Subscribe", "type": "checkbox", "name": "subscribe" },
     {

@@ -1,5 +1,6 @@
 import type { FormField } from "@/types/index";
 import TextField from "@/components/TextField";
+import TextareaField from "@/components/TextareaField";
 import NumberField from "@/components/NumberField";
 import CheckboxField from "@/components/CheckboxField";
 import SelectFieldComponent from "@/components/SelectField";
@@ -45,6 +46,15 @@ const FieldRenderer = ({ field, value, error, onChange }: Props) => {
         <CheckboxField
           field={field}
           value={Boolean(value)}
+          error={error}
+          onChange={onChange}
+        />
+      );
+    case "textarea":
+      return (
+        <TextareaField
+          field={field}
+          value={String(value ?? "")}
           error={error}
           onChange={onChange}
         />

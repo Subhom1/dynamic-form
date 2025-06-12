@@ -24,7 +24,7 @@ const FormRenderer: React.FC<Props> = ({ schema }) => {
     }
   };
   return (
-    <div className="max-w-xl mx-auto p-4">
+    <div className="w-full">
       <h1 className="text-2xl font-bold mb-6 text-blue-800 text-start">
         {schema.title}
       </h1>
