@@ -12,14 +12,14 @@ const RadioField = ({ field, value, error, onChange }: Props) => (
     <span className="block font-medium mb-1 text-blue-800 text-start">
       {field.label}
     </span>
-    <div className="space-y-1 flex">
+    <div className="flex w-full flex-wrap">
       {"options" in field &&
         field.options.map((option: string) => {
           const inputId = `${field.name}-${option}`;
           return (
             <label
               key={option}
-              className="inline-flex items-center mr-4 text-blue-800"
+              className="items-center mr-4 text-blue-800"
               htmlFor={inputId}
             >
               <input

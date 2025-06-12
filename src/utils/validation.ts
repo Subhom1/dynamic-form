@@ -28,8 +28,8 @@ export function validateForm(
     }
     // Additional type-specific validation
     if (field.type === "text" && typeof value === "string") {
-      if (/^\d+$/.test(value)) {
-        errors[field.name] = `${field.label} cannot include numbers`;
+      if (/[^a-zA-Z\s]/.test(value)) {
+        errors[field.name] = `${field.label} cannot include numbers or special characters`;
       }
     }
     if (

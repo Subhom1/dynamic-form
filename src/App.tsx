@@ -17,15 +17,15 @@ function App() {
       </h1>
       <div
         className="wrapper bg-white rounded-2xl border border-gray-200 shadow-lg p-8
-      flex flex-col md:flex-row min-w-[80vw]"
+      flex flex-col md:flex-row"
       >
         <div className="flex-1 flex flex-col items-center justify-center">
           <FormRenderer schema={schemaData} />
         </div>
-        <div className="flex-1 flex items-center justify-center text-black">
+        <div className="flex-1 flex items-center justify-center mt-10 md:mt-0">
             {Object.keys(submittedData).length > 0 ? (
             <div className="mt-6 bg-gray-100 p-4 rounded md:max-w-[30vw] overflow-x-auto">
-              <h2 className="font-semibold mb-2">Submitted Data</h2>
+              <h2 className="font-semibold mb-2 text-black">Submitted Data</h2>
               <pre className="text-sm text-gray-800 text-start whitespace-pre-wrap break-all">
               {JSON.stringify(submittedData, null, 2)}
               </pre>

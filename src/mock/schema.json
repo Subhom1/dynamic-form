@@ -11,7 +11,7 @@
       "label": "Gender",
       "type": "select",
       "name": "gender",
-      "options": ["Male", "Female", "Other"],
+      "options": ["Male", "Female", "Others"],
       "required": true
     }
   ]
