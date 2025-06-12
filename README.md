@@ -200,3 +200,21 @@ This project is configured for deployment to GitHub Pages.
 ---
 
 
+## Future Scope
+
+- **Custom Validation Rules**: Allow users to define advanced validation logic, such as regex patterns, min/max values, or cross-field dependencies.
+- **Conditional Fields**: Support for showing or hiding fields dynamically based on the values of other fields.
+- **Field Grouping and Nested Forms**: Enable grouping of related fields and support for nested schemas to handle complex form structures.
+- **File Uploads**: Add support for file input fields and file upload handling.
+- **UI Customization**: Allow schema authors to specify custom styles, layouts, or even custom React components for individual fields.
+- **Internationalization (i18n)**: Support multiple languages and localization for field labels, placeholders, and error messages.
+- **Form Autosave and Drafts**: Implement autosave functionality and allow users to resume incomplete forms.
+- **API Integration**: Enable direct submission of form data to backend APIs or integration with third-party services.
+- **Accessibility Enhancements**: Further improve accessibility to ensure full WCAG compliance.
+- **Advanced Field Types**: Add support for sliders, color pickers, rich text editors, and other complex field types.
+- **Schema Editor UI**: Build a visual editor for creating and modifying form schemas without editing JSON directly.
+- **Performance Optimization**: Optimize rendering and validation for very large or complex forms.
+
+---
+
+

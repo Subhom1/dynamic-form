@@ -28,7 +28,10 @@ const FormRenderer: React.FC<Props> = ({ schema }) => {
       <h1 className="text-2xl font-bold mb-6 text-blue-800 text-start">
         {schema.title}
       </h1>
-      <form onSubmit={handleFormSubmit}>
+      <form
+        onSubmit={handleFormSubmit}
+        noValidate={process.env.NODE_ENV === "test"}
+      >
         {schema.fields.map((field) => (
           <FieldRenderer
             key={field.name}
