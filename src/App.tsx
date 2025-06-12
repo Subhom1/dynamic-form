@@ -23,13 +23,15 @@ function App() {
           <FormRenderer schema={schemaData} />
         </div>
         <div className="flex-1 flex items-center justify-center text-black">
-            {submittedData && (
+            {Object.keys(submittedData).length > 0 ? (
             <div className="mt-6 bg-gray-100 p-4 rounded md:max-w-[30vw] overflow-x-auto">
               <h2 className="font-semibold mb-2">Submitted Data</h2>
               <pre className="text-sm text-gray-800 text-start whitespace-pre-wrap break-all">
               {JSON.stringify(submittedData, null, 2)}
               </pre>
             </div>
+            ) : (
+              <p className="text-gray-500">No data submitted yet.</p>
             )}
         </div>
       </div>
