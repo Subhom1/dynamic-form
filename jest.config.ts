@@ -7,7 +7,7 @@ module.exports = {
   },
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-    "^@/(.*)$": "<rootDir>/src/$1", // If you use @ as an alias for src
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
   testPathIgnorePatterns: ["/node_modules/", "/dist/", "/build/"],

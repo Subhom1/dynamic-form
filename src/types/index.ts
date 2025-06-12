@@ -48,15 +48,21 @@ interface TextareaField {
   options: string[];
   required?: boolean;
 }
-
+interface RadioField {
+  label: string;
+  name: string;
+  type: "radio";
+  options: string[];
+  required?: boolean;
+}
 export type FormField =
   | TextField
   | NumberField
   | CheckboxField
   | SelectField
   | DateField
-  | TextareaField;
-
+  | TextareaField
+  | RadioField;
 export interface FormSchema {
   title: string;
   fields: FormField[];

@@ -6,6 +6,7 @@
     { "label": "Age", "type": "number", "name": "age","required": true },
     { "label": "Subscribe", "type": "checkbox", "name": "subscribe","required":true},
     { "label": "Date of Birth", "type": "date", "name": "dob", "required": true },
+    {"label": "Hobbies", "type": "radio", "name": "hobbies", "options": ["Reading", "Traveling", "Cooking"], "required": true},
     {
       "label": "Gender",
       "type": "select",

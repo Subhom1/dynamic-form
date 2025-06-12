@@ -3,9 +3,9 @@ import TextField from "@/components/TextField";
 import TextareaField from "@/components/TextareaField";
 import NumberField from "@/components/NumberField";
 import CheckboxField from "@/components/CheckboxField";
-import SelectFieldComponent from "@/components/SelectField";
+import SelectField from "@/components/SelectField";
 import DateField from "@/components/DateField";
-
+import RadioField from "@/components/RadioField";
 type Props = {
   field: FormField;
   value: string | number | boolean | string[] | number[] | boolean[];
@@ -35,7 +35,7 @@ const FieldRenderer = ({ field, value, error, onChange }: Props) => {
       );
     case "select":
       return (
-        <SelectFieldComponent
+        <SelectField
           field={field}
           value={String(value ?? "")}
           error={error}
@@ -63,6 +63,15 @@ const FieldRenderer = ({ field, value, error, onChange }: Props) => {
       case "date":
       return (
         <DateField
+          field={field}
+          value={String(value ?? "")}
+          error={error}
+          onChange={onChange}
+        />
+      );
+      case "radio":
+      return (
+        <RadioField
           field={field}
           value={String(value ?? "")}
           error={error}
