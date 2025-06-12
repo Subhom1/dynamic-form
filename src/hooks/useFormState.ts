@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import type { FormSchema } from "@/types/index";
+import type { FormSchema } from "@/types";
 import { validateForm } from "@/utils/validation";
 import { formValuesAtom, formErrorsAtom } from "@/recoil/atoms";
 // This hook manages the form state using Recoil.

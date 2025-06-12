@@ -1,5 +1,5 @@
 
-import type { FormField } from "@/types/index";
+import type { FormField } from "@/types";
 
 type Props = {
   field: FormField;
@@ -23,6 +23,7 @@ const TextareaField = ({ field, value, error, onChange }: Props) => (
       onChange={(e) => onChange(field.name, e.target.value)}
       className="w-full p-2 border border-blue-600 rounded text-black"
       rows={4}
+      required={field.required}
     />
     {error && <p className="text-red-500 text-sm mt-1 text-start">{error}</p>}
   </div>

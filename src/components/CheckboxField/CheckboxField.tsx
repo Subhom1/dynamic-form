@@ -1,4 +1,4 @@
-import type { FormField } from "@/types/index";
+import type { FormField } from "@/types";
 
 type Props = {
   field: FormField;
@@ -15,8 +15,10 @@ const CheckboxField = ({ field, value, onChange,error }: Props) => (
         checked={value}
         onChange={(e) => onChange(field.name, e.target.checked)}
         className="cursor-pointer"
+        id={field.name}
+        required={field.required}
       />
-      <label className="font-medium text-blue-800 text-left mb-1">
+      <label className="font-medium text-blue-800 text-left mb-1" htmlFor={field.name}>
         {field.label}
       </label>
     </div>

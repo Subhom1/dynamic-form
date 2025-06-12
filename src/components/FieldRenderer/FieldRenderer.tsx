@@ -1,9 +1,10 @@
-import type { FormField } from "@/types/index";
+import type { FormField } from "@/types";
 import TextField from "@/components/TextField";
 import TextareaField from "@/components/TextareaField";
 import NumberField from "@/components/NumberField";
 import CheckboxField from "@/components/CheckboxField";
 import SelectFieldComponent from "@/components/SelectField";
+import DateField from "@/components/DateField";
 
 type Props = {
   field: FormField;
@@ -53,6 +54,15 @@ const FieldRenderer = ({ field, value, error, onChange }: Props) => {
     case "textarea":
       return (
         <TextareaField
+          field={field}
+          value={String(value ?? "")}
+          error={error}
+          onChange={onChange}
+        />
+      );
+      case "date":
+      return (
+        <DateField
           field={field}
           value={String(value ?? "")}
           error={error}

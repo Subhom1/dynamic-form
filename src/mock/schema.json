@@ -3,13 +3,15 @@
   "fields": [
     { "label": "Name", "type": "text", "name": "name", "required": true },
     { "label": "Description", "type": "textarea", "name": "description", "required": true },
-    { "label": "Age", "type": "number", "name": "age" },
-    { "label": "Subscribe", "type": "checkbox", "name": "subscribe" },
+    { "label": "Age", "type": "number", "name": "age","required": true },
+    { "label": "Subscribe", "type": "checkbox", "name": "subscribe","required":true},
+    { "label": "Date of Birth", "type": "date", "name": "dob", "required": true },
     {
       "label": "Gender",
       "type": "select",
       "name": "gender",
-      "options": ["Male", "Female", "Other"]
+      "options": ["Male", "Female", "Other"],
+      "required": true
     }
   ]
 }

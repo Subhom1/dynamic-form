@@ -1,4 +1,4 @@
-import type { FormField } from "@/types/index";
+import type { FormField } from "@/types";
 
 type Props = {
   field: FormField;
@@ -9,7 +9,7 @@ type Props = {
 // This component is used to render a number input field with a label and error message if applicable.
 const NumberField = ({ field, value, error, onChange }: Props) => (
   <div className="mb-4">
-    <label className="block font-medium text-blue-800 text-start mb-1">
+    <label className="block font-medium text-blue-800 text-start mb-1" htmlFor={field.name}>
       {field.label}
     </label>
     <input
@@ -18,6 +18,7 @@ const NumberField = ({ field, value, error, onChange }: Props) => (
       onChange={(e) => onChange(field.name, parseInt(e.target.value))}
       className="border border-blue-600 rounded w-full px-3 py-2 text-black"
       required={field.required}
+      id={field.name}
     />
     {error && <p className="text-red-500 text-sm mt-1 text-left">{error}</p>}
   </div>

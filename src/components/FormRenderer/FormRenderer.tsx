@@ -1,4 +1,4 @@
-import type { FormSchema } from "@/types/index";
+import type { FormSchema } from "@/types";
 import { useFormState } from "@/hooks/useFormState";
 import FieldRenderer from "@/components/FieldRenderer";
 import { useSetRecoilState } from "recoil";

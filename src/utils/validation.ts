@@ -1,5 +1,5 @@
 // utils/validation.ts
-import type { FormSchema } from "@/types/index";
+import type { FormSchema } from "@/types";
 // This utility function validates a form based on the provided schema and values.
 // It checks for required fields, type-specific validations, and returns an object with error messages.
 export function validateForm(
